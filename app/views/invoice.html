@@ -1,0 +1,21 @@
+<input class="form-control"
+       type="button" value="Traer facturas" ng-click="getInvoices()">
+
+<div ng-if="invoices" class="row marketing gifs">
+  <div ng-repeat="invoice in invoices" class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="" alt="" />
+      <div class="caption">
+        Soy una factura n° {{invoice.number}} {{invoice.letter}} {{invoice.pos}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-if="!invoices" class="row marketing empty">
+  <div class="alert alert-danger" role="alert">
+    No hay facturas! :(
+  </div>
+</div>
+
+
